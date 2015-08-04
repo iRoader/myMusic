@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+	<meta charset="UTF-8">
+	<script src = "angular-1.3.0.js"></script>
+	<script src="main.js"></script>
+	<title>Angular</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.wrapper{
+			width: 150px;
+			background: #43DFAB;
+			margin: 20px;
+			padding-top: 10px; 
+		}
+		.button{
+			width: 150px;
+			height: 35px;
+			background: #19E0FA;
+			font-weight: bold;
+			font-size: 17px;
+			font-family: "微软雅黑";
+			color: #666;
+		}
+		h3{
+			text-align: center;
+		}
+		.message img{
+			width: 150px;
+			height: 100px;
+			margin: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="message">
+			<h3>天空之城</h3>
+			<img src="sky.jpeg" alt="">
+		</div>
+		<div ng-controller="PlayerController">
+			<button ng-click="play()" class="button" ng-show="!playing">播 放</button>
+			<button ng-click="stop()" class="button alert" ng-show="playing">暂 停</button>
+		  <!-- Playing audio: <b>{{ playing }}</b> -->
+		</div>
+	</div>
+	
+
+</body>
+</html>
